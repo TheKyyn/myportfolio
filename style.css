@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #081b29;
+  background: black;
   color: #ededed;
 }
 
@@ -40,7 +40,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #081b29;
+    background: black;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
 }
@@ -84,7 +84,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #081b29;
+    background: black;
     animation: showRight 1s ease forwards;
     animation-delay: .8s;
 }
@@ -103,7 +103,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #081b29;
+    background: black;
     animation: showRight 1s ease forwards;
     animation-delay: .95s;
 }
@@ -121,16 +121,30 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #081b29;
+    background: black;
     animation: showRight 1s ease forwards;
     animation-delay: 1.2s;
 }
 
 .home-content .btn-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.55s;
+    z-index: 2;
 }
 
 .btn-box a {
@@ -144,7 +158,7 @@ body {
     border: 2px solid #00abf0;
     border-radius: 8px;
     font-size: 19px;
-    color: #081b29;
+    color: black;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
@@ -163,7 +177,7 @@ body {
 }
 
 .btn-box a:nth-child(2):hover {
-    color: #081b29;
+    color: black;
 } 
 
 .btn-box a:nth-child(2)::before {
@@ -177,7 +191,7 @@ body {
     left: 0;
     width: 0%;
     height: 100%;
-    background: #081b29;
+    background: black;
     z-index: -1;
     transition: .5s;
 }
@@ -192,6 +206,19 @@ body {
     width: 170px;
     display: flex;
     justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.95s;
+    z-index: 2;
 }
 
 .home-sci a {
@@ -213,7 +240,7 @@ body {
 }
 
 .home-sci a:hover {
-    color: #081b29;
+    color: black;
 }
 
 .home-sci a::before {
