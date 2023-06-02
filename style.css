@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 99;
 }
 
 .logo {
@@ -30,3 +30,5 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
+
+.navbar
