@@ -73,6 +73,11 @@ body {
   display: none;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
 .navbar a {
   font-size: 1.7rem;
   color: var(--text-color);
@@ -710,3 +715,4 @@ span {
 .nav-btn:hover::before {
   width: 100%;
 }
+
