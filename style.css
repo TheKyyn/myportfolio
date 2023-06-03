@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: black;
-    --second-bg-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
+    --bg-color: #EAE7DC; /* 1er option : black*/ /* 2eme option : Grey : #1f242d */ 
+    --second-bg-color: #D8C3A5; /* 1ere option : #112e42 */  /* 2eme option :  #323946 */
+    --text-color: #8E8D8A;
+    --main-color: #E98074;
 }
 
 html {
@@ -44,7 +44,7 @@ body {
 .logo {
   position: relative;
   font-size: 2.5rem;
-  color: #ededed;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -56,7 +56,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
 }
@@ -112,7 +112,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 0.8s;
 }
@@ -124,7 +124,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 0.95s;
 }
@@ -142,7 +142,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 1.2s;
 }
@@ -162,7 +162,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 1.55s;
   z-index: 2;
@@ -209,12 +209,12 @@ section {
 }
 
 .btn-box .btn:hover {
-  color: #00abf0;
+  color: var(--main-color);
 }
 
 .btn-box .btn:nth-child(2) {
   background: transparent;
-  color: #00abf0;
+  color: var(--main-color);
 }
 
 .btn-box .btn:nth-child(2):hover {
@@ -222,7 +222,7 @@ section {
 }
 
 .btn-box .btn:nth-child(2)::before {
-  background: #00abf0;
+  background: var(--main-color);
 }
 
 .btn-box .btn::before {
@@ -232,7 +232,7 @@ section {
   left: 0;
   width: 0%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   z-index: -1;
   transition: 0.5s;
 }
@@ -256,7 +256,7 @@ section {
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: var(--bg-color);
   animation: showRight 1s ease forwards;
   animation-delay: 1.95s;
   z-index: 2;
@@ -270,10 +270,10 @@ section {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #00abf0;
+  border: 2px solid var(--main-color);
   border-radius: 50%;
   font-size: 20px;
-  color: #00abf0;
+  color: var(--main-color);
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
@@ -281,7 +281,7 @@ section {
 }
 
 .home-sci a:hover {
-  color: black;
+  color: var(--bg-color);
 }
 
 .home-sci a::before {
@@ -291,7 +291,7 @@ section {
   left: 0;
   width: 0;
   height: 100%;
-  background: #00abf0;
+  background: var(--main-color);
   z-index: -1;
   transition: 0.5s;
 }
