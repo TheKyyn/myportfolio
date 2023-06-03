@@ -675,3 +675,38 @@ span {
 .footer-iconTop a:hover i {
   color: var(--main-color);
 }
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nav-btn i {
+  font-size: 2.4rem;
+  color: var(--main-color);
+  transition: .5s;
+}
+
+.nav-btn:hover i {
+  color: var(--second-bg-color);
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: .5s;
+}
+
+.nav-btn:hover::before {
+  width: 100%;
+}

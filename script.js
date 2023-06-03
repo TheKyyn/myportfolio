@@ -24,3 +24,24 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 }
+
+var darkModeIcon = document.getElementById('dark-mode-icon');
+var lightModeIcon = document.getElementById('light-mode-icon');
+
+darkModeIcon.addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-color', '#000000');
+  document.documentElement.style.setProperty('--second-bg-color', '#112e42');
+  document.documentElement.style.setProperty('--text-color', '#ededed');
+  document.documentElement.style.setProperty('--main-color', '#00abf0');
+  darkModeIcon.style.display = 'none';
+  lightModeIcon.style.display = 'block';
+});
+
+lightModeIcon.addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-color', '#EAE7DC');
+  document.documentElement.style.setProperty('--second-bg-color', '#D8C3A5');
+  document.documentElement.style.setProperty('--text-color', '#8E8D8A');
+  document.documentElement.style.setProperty('--main-color', '#E98074');
+  lightModeIcon.style.display = 'none';
+  darkModeIcon.style.display = 'block';
+});
