@@ -12,8 +12,8 @@
 }
 
 :root {
-  --bg-color: #eae7dc; /* 1er option : black*/ /* 2eme option : Grey : #1f242d */
-  --second-bg-color: #d8c3a5; /* 1ere option : #112e42 */ /* 2eme option :  #323946 */
+  --bg-color: #eae7dc; 
+  --second-bg-color: #d8c3a5; 
   --text-color: #8e8d8a;
   --main-color: #e98074;
 }
