@@ -768,7 +768,7 @@ span {
   }
 
   .navbar {
-    /* position: absolute;
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
@@ -777,8 +777,7 @@ span {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: 0.25s ease;
-    transition-delay: 0.25s; */
-    display: none;
+    transition-delay: 0.25s;
   }
 
   .navbar.active {
