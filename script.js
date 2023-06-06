@@ -58,30 +58,22 @@ lightModeIcon.addEventListener("click", function () {
 document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const fullName = document.querySelector('input[name="fullName"]').value;
-  const email = document.querySelector('input[name="email"]').value;
-  const phoneNumber = document.querySelector('input[name="phoneNumber"]').value;
-  const subject = document.querySelector('input[name="subject"]').value;
-  const message = document.querySelector('textarea[name="message"]').value;
+  var formData = new FormData(e.target);
 
-  const contact = {
-    fullName: fullName,
-    email: email,
-    phoneNumber: phoneNumber,
-    subject: subject,
-    message: message
-  };
-
-  fetch('http://localhost:3000/contacts', {
+  fetch('https://formspree.io/f/mnqykzky', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(contact)
+    body: formData
   })
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('confirmation-message').textContent = data.message;
+  .then(response => {
+    if (response.ok) {
+      document.getElementById('confirmation-message').textContent = "Thank you. Your message has been sent.";
+    } else {
+      document.getElementById('confirmation-message').textContent = "Looks like something went wrong. Please try again.";
+    }
   })
-  .catch(error => console.error(error));
+  .catch(error => {
+    console.error(error);
+    document.getElementById('confirmation-message').textContent = "Looks like something went wrong. Please try again.";
+  });
 });
+
