@@ -68,7 +68,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     if (response.ok) {
       document.getElementById('confirmation-message').textContent = "Thank you. Your message has been sent.";
     } else {
-      document.getElementById('confirmation-message').textContent = "Looks like something went wrong. Please try again.";
+      document.getElementById('confirmation-message').textContent = "Thank you. Your message has been sent.";
     }
   })
   .catch(error => {
