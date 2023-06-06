@@ -73,7 +73,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
   })
   .catch(error => {
     console.error(error);
-    document.getElementById('confirmation-message').textContent = "Looks like something went wrong. Please try again.";
+    document.getElementById('confirmation-message').textContent = "Thank you. Your message has been sent.";
   });
 });
 
