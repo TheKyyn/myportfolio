@@ -77,3 +77,24 @@ document.querySelector('form').addEventListener('submit', (e) => {
   });
 });
 
+// Changement de langue
+const languageToggleBtnFr = document.getElementById('language-toggle-fr');
+const languageToggleBtnEn = document.getElementById('language-toggle-en');
+
+languageToggleBtnFr.addEventListener('click', function() {
+  if (window.location.pathname !== '/index-fr.html') {
+    window.location.href = 'index-fr.html';
+    languageToggleBtnFr.style.display = 'none';
+    languageToggleBtnEn.style.display = 'block';
+  }
+});
+
+languageToggleBtnEn.addEventListener('click', function() {
+  if (window.location.pathname !== '/index.html') {
+    window.location.href = 'index.html';
+    languageToggleBtnFr.style.display = 'block';
+    languageToggleBtnEn.style.display = 'none';
+  }
+});
+
+

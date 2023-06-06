@@ -734,6 +734,28 @@ span {
   width: 100%;
 }
 
+#language-toggle-fr {
+  font-size: 2.4rem;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
+#language-toggle-fr:hover {
+  color: var(--second-bg-color);
+}
+
+#language-toggle-en {
+  font-size: 2.4rem;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
+#language-toggle-en:hover {
+  color: var(--second-bg-color);
+}
+
+
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
