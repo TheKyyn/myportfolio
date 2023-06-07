@@ -12,8 +12,8 @@
 }
 
 :root {
-  --bg-color: #eae7dc; 
-  --second-bg-color: #d8c3a5; 
+  --bg-color: #eae7dc;
+  --second-bg-color: #d8c3a5;
   --text-color: #8e8d8a;
   --main-color: #e98074;
 }
@@ -79,18 +79,23 @@ body {
   display: flex;
   align-items: center;
 }
-
-.navbar a {
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.navbar ul li a {
   font-size: 1.7rem;
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  margin-left: 3.5rem;
   transition: 0.4s;
+  margin: 0;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar ul li a:hover,
+.navbar ul li a.active {
   color: var(--main-color);
 }
 
@@ -163,7 +168,7 @@ section {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 345px;
+  width: 365px;
   height: 50px;
 }
 
@@ -199,7 +204,7 @@ section {
 }
 
 .home-content .text-animate h3::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -756,25 +761,29 @@ span {
   color: var(--second-bg-color);
 }
 
-#language-toggle-fr, #language-toggle-en {
+#language-toggle-fr,
+#language-toggle-en {
   font-size: 2.4rem;
   color: var(--main-color);
   transition: 0.5s;
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
 
-#language-toggle-fr:hover, #language-toggle-en:hover {
+#language-toggle-fr:hover,
+#language-toggle-en:hover {
   color: var(--second-bg-color);
 }
-
-
 
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
   }
 }
-
+@media (max-width: 1400px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 991px) {
   .header {
     padding: 2rem 4%;
@@ -797,60 +806,83 @@ span {
   .header {
     background: var(--bg-color);
   }
-
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills,
+  .contact,
+  .about,
+  .projects {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+  .skills-row {
+    margin-top: 4rem;
+  }
+  #myForm {
+    margin-top: 22px;
+  }
+  .heading {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
   #menu-icon {
     display: block;
   }
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 
+  .navbar-collapse.active {
+    max-height: 500px;
+    transition: max-height 0.2s ease-in;
+  }
   .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem 4%;
-    background: var(--main-color);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: 0.25s ease;
-    transition-delay: 0.25s;
+    z-index: 999;
+    background-color: var(--bg-color);
+    width: 100%;
+    overflow: hidden;
+  }
+  .navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
   }
 
   .navbar.active {
-    left: 0;
-    transition-delay: 0s;
-    flex-direction: column;
-  }
-
-  .navbar .active-nav {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    z-index: -1;
-    transition: .25s ease;
-    transition-delay: 0s;
-  }
-
-  .navbar.active .active-nav {
-    transition-delay: .25s;
-    left: 0;
+    overflow: visible;
   }
 
   .navbar a {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
-    transform: translateX(-20rem);
-    transition: .25s ease;
     transition-delay: 0s;
   }
 
-  .navbar.active a {
-    transform: translateX(0);
-    transition-delay: .25s;
+  .home {
+    min-height: auto;
+    height: auto;
+    gap: 12rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  .home-sci {
+    position: relative;
+  }
+  .home-content .btn-box {
+    width: 320px;
   }
 }
 
@@ -858,7 +890,9 @@ span {
   html {
     font-size: 50%;
   }
-
+  .home-content .btn-box {
+    width: 294px;
+  }
   .home-content h1 {
     display: flex;
     flex-direction: column;
@@ -900,6 +934,8 @@ span {
 @media (max-width: 371px) {
   .home {
     justify-content: center;
+    align-items: center;
+    padding-bottom: 20px !important;
   }
 
   .home-content {
@@ -914,38 +950,41 @@ span {
   }
 }
 
-
 @keyframes homeBgText {
-
   0%,
   10%,
   100% {
-      background-position: -33rem 0;
+    background-position: -33rem 0;
   }
 
   65%,
   85% {
-      background-position: 0 0;
+    background-position: 0 0;
   }
 }
 
 @keyframes homeCursorText {
-
   0%,
   10%,
   100% {
-      width: 0;
+    width: 0;
   }
 
   65%,
   78%,
   85% {
-      width: 100%;
-      opacity: 1;
+    width: 100%;
+    opacity: 1;
   }
 
   75%,
   81% {
     opacity: 0;
   }
+}
+
+.btn.btn-secondary {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20rem;
 }
