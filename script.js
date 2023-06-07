@@ -81,7 +81,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 const languageToggleBtnFr = document.getElementById('language-toggle-fr');
 const languageToggleBtnEn = document.getElementById('language-toggle-en');
 
-if (window.location.pathname.endsWith('index-fr.html')) {
+if (window.location.pathname.endsWith('index-en.html')) {
   languageToggleBtnFr.style.display = 'none';
   languageToggleBtnEn.style.display = 'block';
 } else {
@@ -90,13 +90,13 @@ if (window.location.pathname.endsWith('index-fr.html')) {
 }
 
 languageToggleBtnFr.addEventListener('click', function() {
-  if (!window.location.pathname.endsWith('index-fr.html')) {
-    window.location.href = 'index-fr.html';
+  if (!window.location.pathname.endsWith('index-en.html')) {
+    window.location.href = 'index-en.html';
   }
 });
 
 languageToggleBtnEn.addEventListener('click', function() {
-  if (window.location.pathname.endsWith('index-fr.html')) {
+  if (window.location.pathname.endsWith('index-en.html')) {
     window.location.href = 'index.html';
   }
 });
